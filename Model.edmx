@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBSubdereModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Subdere">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Institucion" Type="nvarchar" MaxLength="50" />
+          <Property Name="EstadoPago" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaPago" Type="datetime" />
+          <Property Name="MontoOriginal" Type="int" />
+          <Property Name="MontoCuota" Type="int" />
+          <Property Name="MontoIpc" Type="int" />
+          <Property Name="MontoReajuste" Type="int" />
+          <Property Name="MontoInteres" Type="int" />
+          <Property Name="MontoPagar" Type="int" />
+          <Property Name="NumeroSerie" Type="int" />
+          <Property Name="CodigoVerificacion" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoIra" Type="int" />
+          <Property Name="NombreIra" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoTransaccion" Type="int" />
+          <Property Name="PagoDuplicado" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rut" Type="nvarchar" MaxLength="50" />
+          <Property Name="Patente" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaVencimiento" Type="date" />
+          <Property Name="NroSerieDocumento" Type="int" />
+          <Property Name="FechaFactura" Type="date" />
+          <Property Name="FechaEmisionHomologacion" Type="date" />
+          <Property Name="ValorNetoFactura" Type="bigint" />
+          <Property Name="DigitoVerificadorPatente" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoSII" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ano" Type="int" />
+          <Property Name="Tasacion" Type="bigint" />
+          <Property Name="Motor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Chasis" Type="nvarchar" MaxLength="50" />
+          <Property Name="Color" Type="nvarchar" MaxLength="50" />
+          <Property Name="NroAsientos" Type="int" />
+          <Property Name="Tara" Type="int" />
+          <Property Name="NombrePropietario" Type="nvarchar" MaxLength="250" />
+          <Property Name="DomicilioPropietario" Type="nvarchar" MaxLength="250" />
+          <Property Name="ComunaPropietario" Type="nvarchar" MaxLength="250" />
+          <Property Name="TelefonoPropietario" Type="nvarchar" MaxLength="50" />
+          <Property Name="SelloVerde" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaPlazoHomologacion" Type="date" />
+          <Property Name="Modelo" Type="nvarchar" MaxLength="150" />
+          <Property Name="Marca" Type="nvarchar" MaxLength="150" />
+          <Property Name="TipoVehiculo" Type="nvarchar" MaxLength="150" />
+          <Property Name="Cilindrada" Type="int" />
+          <Property Name="Combustible" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transmision" Type="nvarchar" MaxLength="50" />
+          <Property Name="Equipamiento" Type="nvarchar" MaxLength="50" />
+          <Property Name="NroPuertas" Type="int" />
+          <Property Name="ZonaFranca" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tonelaje" Type="int" />
+          <Property Name="Cuota" Type="nvarchar" MaxLength="50" />
+          <Property Name="PolizaSoap" Type="nvarchar" MaxLength="50" />
+          <Property Name="NombreAseguradora" Type="nvarchar" MaxLength="150" />
+          <Property Name="CertificadoRevisionTecnica" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertificadoRevisionGases" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoPlantaRevisionTecnica" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoPlantaRevisionGases" Type="nvarchar" MaxLength="50" />
+          <Property Name="NombreContribuyente" Type="nvarchar" MaxLength="150" />
+          <Property Name="EmailContribuyente" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityContainer Name="DBSubdereModelStoreContainer">
+          <EntitySet Name="Subdere" EntityType="Self.Subdere" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBSubdereModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Subdere">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Institucion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoPago" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="MontoOriginal" Type="Int32" />
+          <Property Name="MontoCuota" Type="Int32" />
+          <Property Name="MontoIpc" Type="Int32" />
+          <Property Name="MontoReajuste" Type="Int32" />
+          <Property Name="MontoInteres" Type="Int32" />
+          <Property Name="MontoPagar" Type="Int32" />
+          <Property Name="NumeroSerie" Type="Int32" />
+          <Property Name="CodigoVerificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoIra" Type="Int32" />
+          <Property Name="NombreIra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoTransaccion" Type="Int32" />
+          <Property Name="PagoDuplicado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaVencimiento" Type="DateTime" Precision="0" />
+          <Property Name="NroSerieDocumento" Type="Int32" />
+          <Property Name="FechaFactura" Type="DateTime" Precision="0" />
+          <Property Name="FechaEmisionHomologacion" Type="DateTime" Precision="0" />
+          <Property Name="ValorNetoFactura" Type="Int64" />
+          <Property Name="DigitoVerificadorPatente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoSII" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ano" Type="Int32" />
+          <Property Name="Tasacion" Type="Int64" />
+          <Property Name="Motor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Chasis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NroAsientos" Type="Int32" />
+          <Property Name="Tara" Type="Int32" />
+          <Property Name="NombrePropietario" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DomicilioPropietario" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ComunaPropietario" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TelefonoPropietario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SelloVerde" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaPlazoHomologacion" Type="DateTime" Precision="0" />
+          <Property Name="Modelo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Marca" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TipoVehiculo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Cilindrada" Type="Int32" />
+          <Property Name="Combustible" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transmision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Equipamiento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NroPuertas" Type="Int32" />
+          <Property Name="ZonaFranca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tonelaje" Type="Int32" />
+          <Property Name="Cuota" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PolizaSoap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NombreAseguradora" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CertificadoRevisionTecnica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CertificadoRevisionGases" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoPlantaRevisionTecnica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoPlantaRevisionGases" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NombreContribuyente" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="EmailContribuyente" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DBSubdereEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Subdere" EntityType="Self.Subdere" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBSubdereModelStoreContainer" CdmEntityContainer="DBSubdereEntities">
+          <EntitySetMapping Name="Subdere">
+            <EntityTypeMapping TypeName="DBSubdereModel.Subdere">
+              <MappingFragment StoreEntitySet="Subdere">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Institucion" ColumnName="Institucion" />
+                <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="MontoOriginal" ColumnName="MontoOriginal" />
+                <ScalarProperty Name="MontoCuota" ColumnName="MontoCuota" />
+                <ScalarProperty Name="MontoIpc" ColumnName="MontoIpc" />
+                <ScalarProperty Name="MontoReajuste" ColumnName="MontoReajuste" />
+                <ScalarProperty Name="MontoInteres" ColumnName="MontoInteres" />
+                <ScalarProperty Name="MontoPagar" ColumnName="MontoPagar" />
+                <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />
+                <ScalarProperty Name="CodigoVerificacion" ColumnName="CodigoVerificacion" />
+                <ScalarProperty Name="CodigoIra" ColumnName="CodigoIra" />
+                <ScalarProperty Name="NombreIra" ColumnName="NombreIra" />
+                <ScalarProperty Name="CodigoTransaccion" ColumnName="CodigoTransaccion" />
+                <ScalarProperty Name="PagoDuplicado" ColumnName="PagoDuplicado" />
+                <ScalarProperty Name="Rut" ColumnName="Rut" />
+                <ScalarProperty Name="Patente" ColumnName="Patente" />
+                <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+                <ScalarProperty Name="NroSerieDocumento" ColumnName="NroSerieDocumento" />
+                <ScalarProperty Name="FechaFactura" ColumnName="FechaFactura" />
+                <ScalarProperty Name="FechaEmisionHomologacion" ColumnName="FechaEmisionHomologacion" />
+                <ScalarProperty Name="ValorNetoFactura" ColumnName="ValorNetoFactura" />
+                <ScalarProperty Name="DigitoVerificadorPatente" ColumnName="DigitoVerificadorPatente" />
+                <ScalarProperty Name="CodigoSII" ColumnName="CodigoSII" />
+                <ScalarProperty Name="Ano" ColumnName="Ano" />
+                <ScalarProperty Name="Tasacion" ColumnName="Tasacion" />
+                <ScalarProperty Name="Motor" ColumnName="Motor" />
+                <ScalarProperty Name="Chasis" ColumnName="Chasis" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="NroAsientos" ColumnName="NroAsientos" />
+                <ScalarProperty Name="Tara" ColumnName="Tara" />
+                <ScalarProperty Name="NombrePropietario" ColumnName="NombrePropietario" />
+                <ScalarProperty Name="DomicilioPropietario" ColumnName="DomicilioPropietario" />
+                <ScalarProperty Name="ComunaPropietario" ColumnName="ComunaPropietario" />
+                <ScalarProperty Name="TelefonoPropietario" ColumnName="TelefonoPropietario" />
+                <ScalarProperty Name="SelloVerde" ColumnName="SelloVerde" />
+                <ScalarProperty Name="FechaPlazoHomologacion" ColumnName="FechaPlazoHomologacion" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="TipoVehiculo" ColumnName="TipoVehiculo" />
+                <ScalarProperty Name="Cilindrada" ColumnName="Cilindrada" />
+                <ScalarProperty Name="Combustible" ColumnName="Combustible" />
+                <ScalarProperty Name="Transmision" ColumnName="Transmision" />
+                <ScalarProperty Name="Equipamiento" ColumnName="Equipamiento" />
+                <ScalarProperty Name="NroPuertas" ColumnName="NroPuertas" />
+                <ScalarProperty Name="ZonaFranca" ColumnName="ZonaFranca" />
+                <ScalarProperty Name="Tonelaje" ColumnName="Tonelaje" />
+                <ScalarProperty Name="Cuota" ColumnName="Cuota" />
+                <ScalarProperty Name="PolizaSoap" ColumnName="PolizaSoap" />
+                <ScalarProperty Name="NombreAseguradora" ColumnName="NombreAseguradora" />
+                <ScalarProperty Name="CertificadoRevisionTecnica" ColumnName="CertificadoRevisionTecnica" />
+                <ScalarProperty Name="CertificadoRevisionGases" ColumnName="CertificadoRevisionGases" />
+                <ScalarProperty Name="CodigoPlantaRevisionTecnica" ColumnName="CodigoPlantaRevisionTecnica" />
+                <ScalarProperty Name="CodigoPlantaRevisionGases" ColumnName="CodigoPlantaRevisionGases" />
+                <ScalarProperty Name="NombreContribuyente" ColumnName="NombreContribuyente" />
+                <ScalarProperty Name="EmailContribuyente" ColumnName="EmailContribuyente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
